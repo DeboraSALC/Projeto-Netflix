@@ -1,0 +1,229 @@
+:root {
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*elemento base*/
+
+body {
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    justify-content: space-between;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: var(--vermelho);
+}
+
+
+/*modo luz*/
+
+label {
+    position: absolute;
+    width: 38px;
+    height: 20px;
+    right: 10px;
+    top: 15px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+
+label::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    left: 1px;
+    top: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #AAA;
+    transition: 0.4s;
+}
+
+label.active::before {
+    left: 20px;
+    background: rgb(119, 119, 119);
+}
+
+body.light {
+    background: rgb(255, 250, 250);
+    color: #AAA
+}
+
+
+/*filme principal*/
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%), url('/img/SexEducation_post1.jpg');
+    /*espacinho*/
+    height: 600px;
+    background-size: cover;
+    /*espacinho*/
+    display: flex;
+    flex-direction: column;
+    /*Ele sempre se invertem de acordo com o flex direction*/
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 2s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+
+/* Wrapper = envelopar */
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrossel-filmes {
+    margin-top: 10px;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: rgb(32, 31, 31);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    font-family: 'Arial', Times, serif;
+    color: #AAA;
+}
+
+.conteudo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.conteudo-footer h3 {
+    font-size: 25px;
+    font-weight: 100;
+    text-transform: capitalize;
+    line-height: 40px;
+}
+
+.conteudo-footer p {
+    max-width: 500px;
+    margin: 20px auto;
+    line-height: 30px;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.sns {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20 0 48 0;
+}
+
+.sns li {
+    margin: 0 15px;
+    margin-bottom: 40px;
+}
+
+.sns a {
+    text-decoration: none;
+    color: white;
+}
+
+.sns a i {
+    font-size: 18px;
+    transition: color .4s ease;
+}
+
+.sns a:hover i {
+    color: var(--vermelho);
+}
+
+.base-footer {
+    background-color: var(--preta);
+    width: 100vw;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.base-footer p {
+    font-size: 12px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.base-footer span {
+    text-transform: uppercase;
+    opacity: .4;
+}
